@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 import 'jquery/dist/jquery.js';
+import 'bootstrap'
 import 'bootstrap/dist/js/bootstrap.js';
 
 import VueResource from 'vue-resource'
