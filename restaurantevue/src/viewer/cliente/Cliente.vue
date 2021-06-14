@@ -69,13 +69,12 @@ export default {
     },
     
     created(){
+        this.atualizarLista(this.cliente);
         this.service = new ClienteService(this.$resource);
         this.service
             .listar()
             .then(clientes => this.clientes = clientes, erro => this.mensagem = erro.message);
-        this.atualizarLista(this.cliente);
     }
-
 }
 </script>
 
