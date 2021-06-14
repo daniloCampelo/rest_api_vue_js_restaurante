@@ -6,7 +6,7 @@
 </template>
 <script>
 
-import FormCliente from '../../components/cliente/ClienteForm.vue'
+import FormCliente from './components/ClienteForm.vue'
 
 export default {
     data(){

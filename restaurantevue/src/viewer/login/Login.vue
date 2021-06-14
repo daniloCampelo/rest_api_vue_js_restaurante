@@ -33,7 +33,7 @@
 <script>
 
 import { routes } from '../../router'
-import Cliente from '../../components/cliente/domain/Cliente'
+import Cliente from '../cliente/domain/Cliente.js'
 
 export default {
     data(){

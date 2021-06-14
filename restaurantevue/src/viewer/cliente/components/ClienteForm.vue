@@ -29,9 +29,9 @@
 <script>
 
 import Imagem from '../Imagem.vue'
-import Cliente from './domain/Cliente';
-import ClienteService from '../../components/cliente/domain/ClienteService'
-import { routes } from '../../router';
+import Cliente from '../domain/Cliente.js';
+import ClienteService from '../domain/ClienteService'
+import { routes } from '../../../router.js';
 
 export default {
 

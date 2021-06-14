@@ -23,8 +23,8 @@
 
 <script>
 
-import ClienteView from '../../components/cliente/ClienteView.vue';
-import ClienteService from '../../components/cliente/domain/ClienteService';
+import ClienteView from './components/ClienteView.vue';
+import ClienteService from '../cliente/domain/ClienteService.js';
 
 export default {
     

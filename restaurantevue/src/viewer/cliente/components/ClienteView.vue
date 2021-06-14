@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import ClienteService from '../../components/cliente/domain/ClienteService';
+import ClienteService from '../domain/ClienteService';
 import Imagem from '../Imagem.vue';
 
 export default {
