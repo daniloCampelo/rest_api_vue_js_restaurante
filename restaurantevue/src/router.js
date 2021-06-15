@@ -11,7 +11,7 @@ import AtualizarCliente from './viewer/cliente/AtualizarCliente.vue'
 import Login from './viewer/login/Login.vue'
 import CadastrarCliente from './viewer/cliente/CadastroCliente.vue'
 
-// import provedor from './provedor.js'
+import provedor from './provedor.js'
 
 Vue.use(VueRouter)
 
@@ -22,6 +22,9 @@ export const routes = [
         titulo: 'Home',
         name: 'home',
         menu: true,
+        meta: {
+            publica: true
+        }
     },
     {
         path: '/Cliente',
@@ -36,6 +39,9 @@ export const routes = [
         titulo: 'Cadastrar Cliente',
         name: 'cadastrarcliente',
         menu: true,
+        meta: {
+            publica: true
+        }
     },
     {
         path: '/AtualizarCliente/:id',
@@ -78,6 +84,9 @@ export const routes = [
         titulo: 'Login',
         name: 'login',
         menu: false,
+        meta: {
+            publica: true
+        }
     }
 
 ]
@@ -85,6 +94,13 @@ export const routes = [
 const router = new VueRouter({
     routes,
     mode: 'history',
+})
+
+router.beforeEach((routeTo, routeFrom, next) => {
+    if (!routeTo.meta.publica && !provedor.state.token) {
+        return next({ path: '/login' })
+    }
+    next()
 })
 
 export default router

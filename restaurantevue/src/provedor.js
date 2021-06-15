@@ -1,10 +1,8 @@
-/*
 import Vue from 'vue';
 import Vuex from 'vuex';
 import http from './http/index.js'
 
 Vue.use(Vuex)
-
 
 const estado = {
     token: null,
@@ -46,4 +44,3 @@ export default new Vuex.Store({
     mutations: mutations,
     actions
 })
-*/
